@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #06ada5 50%, #670680 50%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.todo-app {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2rem;
+}
+
+header p {
+    color: #667;
+    font-size: 1rem;
+}
+
+#task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+#task-form button {
+    padding: 12px 20px;
+    background-color: #60a5fa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#task-form button:hover {
+    background-color: #3b82f6;
+}
+
+#task-list {
+    list-style: none;
+}
+
+.no-tasks {
+    color: #888;
+    text-align: center;
+    padding: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.task-item .task-text {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #333;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.task-item.editing .task-text {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.task-item .action-btn {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    text-align: center;
+}
+
+.edit-btn {
+    color: #f59e0b;
+}
+.edit-btn:hover {
+    color: #d97706;
+}
+
+.delete-btn {
+    color: #ef4444;
+}
+.delete-btn:hover {
+    color: #dc2626;
+}
